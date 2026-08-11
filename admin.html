@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jignesh Collection | Product Manager</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="admin.css"></head>
+<body class="admin">
+<header class="adminbar"><a class="brand" href="index.html"><span class="logo">JC</span><span><b>Jignesh</b><small>COLLECTION</small></span></a><a href="index.html" class="btn">View Store ↗</a></header>
+<main class="adminwrap">
+  <div class="adminhead"><div><p class="eyebrow">PRIVATE PRODUCT MANAGER</p><h1>Add & manage products</h1><p>Everything on this page is saved in this browser. Use Export to create the catalogue file for your GitHub/Netlify website.</p></div><button id="reset" class="btn danger">Reset demo products</button></div>
+  <section class="panel">
+    <div class="paneltitle"><h2 id="formTitle">Add Product</h2><button id="cancel" class="text" hidden>Cancel edit</button></div>
+    <form id="form" class="formgrid">
+      <input type="hidden" id="id">
+      <label>Product name<input id="name" required placeholder="e.g. Designer Silk Saree"></label>
+      <label>Category<input id="category" required list="categoryList" placeholder="Sarees / Jewellery"><datalist id="categoryList"><option>Sarees</option><option>Jewellery</option><option>Earrings</option><option>Necklaces</option><option>Bangles</option></datalist></label>
+      <label>Selling price (₹)<input id="price" required type="number" min="0" step="1" placeholder="799"></label>
+      <label>MRP / Old price (₹)<input id="oldPrice" type="number" min="0" step="1" placeholder="999"></label>
+      <label>Badge<input id="badge" placeholder="NEW / SALE / BESTSELLER"></label>
+      <label>Image path<input id="image" required placeholder="assets/products/red-saree.jpg"></label>
+      <label class="wide">Description<textarea id="description" rows="3" placeholder="Short product description"></textarea></label>
+      <label class="wide">Details (comma separated)<input id="details" placeholder="Lightweight, Festive wear, Easy to maintain"></label>
+      <label class="check"><input id="featured" type="checkbox" checked> Featured product</label>
+      <div class="formactions"><button class="btn primary" id="save">Save Product</button></div>
+    </form>
+  </section>
+
+  <section class="panel">
+    <div class="paneltitle"><div><h2>Your Products</h2><span id="count"></span></div><div class="exports"><button id="download" class="btn">Download products.js</button><button id="copy" class="btn">Copy products.js</button></div></div>
+    <div id="list" class="adminlist"></div>
+  </section>
+
+  <section class="panel help">
+    <h2>How to use with GitHub + Netlify</h2>
+    <ol><li>Put each product photo in <code>assets/products/</code>.</li><li>Use the exact image path in the form.</li><li>Save products here.</li><li>Click <b>Download products.js</b>.</li><li>Replace the old <code>products.js</code> in your GitHub repository with the downloaded file and commit it.</li><li>Netlify will automatically redeploy the connected site.</li></ol>
+    <p><b>Important:</b> this browser-only manager does not directly write to GitHub. A secure GitHub-connected admin panel would need a server/API layer so your GitHub token is never exposed in the browser.</p>
+  </section>
+</main>
+<script src="products.js"></script><script src="admin.js"></script>
+</body></html>
