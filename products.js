@@ -4,7 +4,7 @@
   For easy management, use ADMIN.html instead.
 */
 const STORE_CONFIG = {
-  storeName: "Jignesh Collection",
+  storeName: "Patel Collection",
   whatsappNumber: "919714316584",
   location: "Gujarat, India",
   tagline: "Sarees & Jewellery • Your style, your story."
